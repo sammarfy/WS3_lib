@@ -1,5 +1,8 @@
 # WS3_lib
-Libraries for WS3
+Pipeline for the WS3 analysis experiment.
+
+# Requirements
+Code tested in Lambdapgml server with environment listed in `requirements.txt`
 
 # Download Model
 Use gdown to download the saved resnet model into the 'sess/' directory.
