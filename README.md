@@ -4,8 +4,13 @@ Libraries for WS3
 # Download Model
 Use gdown to download the saved resnet model into the 'sess/' directory.
 
+Original Model:
 ```
 gdown -O sess/ https://drive.google.com/uc?id=14XtzLupSKVmcM4I3shH6k72HzXz53WhM
+```
+Noisy Model:
+```
+gdown -O sess/ https://drive.google.com/uc?id=1cZ0XMXdhqxLNkG2K8jbxpgbZK2GmPOpD
 ```
 
 
