@@ -19,6 +19,14 @@ def compute_miou(preds, gts):
 
     return np.nanmean(iou)
 
+def compute_mRecall(preds, gts):
+    confusion = calc_semantic_segmentation_confusion(preds, gts)
+    correct_fg_pred = np.diag(confusion[1:, 1:])
+    fg_gt = confusion.sum(axis=1)[1:]
+    
+    recall = correct_fg_pred/fg_gt
+    return np.nanmean(recall)
+
 def compute_dr_recall(preds, dr_gts):
     '''
     This function takes two lists as inputs, where:
@@ -27,7 +35,7 @@ def compute_dr_recall(preds, dr_gts):
     
     returns mean recall of all classes for discriminative region
     '''
-    return compute_miou(preds, dr_gts)
+    return compute_mRecall(preds, dr_gts)
 
 def compute_ndr_recall(preds, ndr_gts):
     '''
@@ -37,7 +45,7 @@ def compute_ndr_recall(preds, ndr_gts):
     
     returns mean recall of all classes for non-discriminative region
     '''
-    return compute_miou(preds, ndr_gts)
+    return compute_mRecall(preds, ndr_gts)
 
 def compute_mPrecision(preds, gts):
     '''
@@ -49,7 +57,7 @@ def compute_mPrecision(preds, gts):
     '''
     confusion = calc_semantic_segmentation_confusion(preds, gts)
     correct_fg_pred = np.diag(confusion[1:, 1:])
-    fg_pred = confusion[:, 1:].sum(axis=0)
+    fg_pred = confusion.sum(axis=0)[1:]
     
     precision = correct_fg_pred/fg_pred
     
