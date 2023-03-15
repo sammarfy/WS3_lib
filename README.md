@@ -7,6 +7,18 @@ Code tested with environment listed in `requirements.txt`.
 # Download Dataset
 Download the [`PASCAL VOC 2012 dataset`](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/) and store that in 'datasets/' directory. 
 
+# Download Ground Truths
+Download and unzip Superpixels, DR Ground Truth, and NDR Ground Truth in the 'gts/' directory.
+```
+gdown -O gts/ https://drive.google.com/uc?id=1FACqnJ_9mEozvtv0GGZ2diAtj7KiynQx
+
+gdown -O gts/ https://drive.google.com/uc?id=1Uf9c6NK2pE-YlyV5LMrpuTudNvivFTvG
+
+gdown -O gts/ https://drive.google.com/uc?id=1dSSMOHAk0S9_WkAjDHz6evUbEI_F4r0i
+
+```
+
+
 # Download Model
 Use gdown to download the saved resnet model into the 'sess/' directory.
 
