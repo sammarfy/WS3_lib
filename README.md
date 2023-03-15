@@ -22,6 +22,11 @@ Noisy Model (Gaussian Noise Perturbation):
 ```
 gdown -O sess/ https://drive.google.com/uc?id=1BYsy0-X1Ksc0n2yY-Q7dBNvUXwZ-Hee_
 ```
+Alternatively, we can fine-tune these models using the following command:
+
+```
+bash fine-tuning/generate_pseudo_mask.sh
+```
 
 # Example of directory hierarchy:
 
