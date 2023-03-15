@@ -23,7 +23,7 @@ Noisy Model (Gaussian Noise Perturbation):
 gdown -O sess/ https://drive.google.com/uc?id=1BYsy0-X1Ksc0n2yY-Q7dBNvUXwZ-Hee_
 ```
 
-Example of directory hierarchy:
+# Example of directory hierarchy:
 
 ```
 WS3
