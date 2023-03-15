@@ -37,6 +37,7 @@ WS3
 |--- datasets
 |    |--- VOCdevkit/VOC2012
 |         | ...
+|--- notebooks
 | ...
 
 ```
